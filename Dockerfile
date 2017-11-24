@@ -8,7 +8,7 @@ RUN apk add --update \
 	bash \
 	&& rm -rf /var/cache/apk/*
 
-COPY files/passwords /etc/squid/passwords
+COPY files/htpasswd /etc/squid/auth/htpasswd
 COPY files/squid.conf /etc/squid/squid.conf
 COPY files/entrypoint.sh /usr/local/bin/entrypoint.sh
 
